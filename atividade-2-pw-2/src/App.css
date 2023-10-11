@@ -1,42 +1,162 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap");
+
+:root {
+	font-family: "Inter", sans-serif;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.mainDiv {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+
+	background-color: #1a1a1a;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	height: 100vh;
+	width: 100vw;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header {
+	color: #4ea8de;
+	background-color: #0d0d0d;
+
+	width: 100vw;
+	height: 200px;
+
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.header h1 {
+	font-size: 3.2em;
+	line-height: 1.1;
 }
 
-.card {
-  padding: 2em;
+.inputDiv {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: row;
+
+	gap: 8px;
 }
 
-.read-the-docs {
-  color: #888;
+.inputDiv input {
+	width: 650px;
+	height: 47.5px;
+
+	background-color: #262626;
+
+	border: none;
+	border-radius: 8px;
+	padding-left: 1rem;
+
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.inputDiv input:focus {
+	outline: 1px solid #5e60ce;
+}
+
+.inputDiv button {
+	width: 90px;
+	height: 50px;
+	background-color: #1e6f9f;
+	border-radius: 8px;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	gap: 8px;
+
+	font-size: 1rem;
+	font-weight: 700;
+
+	transition: 200ms ease-in-out;
+}
+.inputDiv button:hover {
+	background-color: #4ea8de;
+}
+
+.inputDiv button img {
+	display: flex;
+	align-self: center;
+}
+
+.inputDiv input,
+.inputDiv button {
+	position: relative;
+	top: -50%;
+}
+
+.techsCounters {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 766px;
+}
+
+.techsCounters p {
+	font-weight: 700;
+	color: #1e6f9f;
+}
+
+.techsCounters p:last-child {
+	color: #8284fa;
+}
+
+.techsCounters span {
+	width: 24px;
+	height: 19px;
+	padding: 0 0.5rem;
+
+	background-color: #333333;
+	color: white;
+	font-size: 0.9rem;
+
+	border: 1px solid #333333;
+	border-radius: 999px;
+}
+
+/* caso sem techs */
+
+.divSemTechs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #808080;
+
+	width: 766px;
+	height: 172px;
+	gap: 0;
+
+	border-top: 1px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+
+	border-style: solid;
+	border-color: #333333;
+	border-radius: 8px;
+
+	margin-top: 1rem;
+	padding: 64px, 24px, 64px, 24px;
+}
+
+.divSemTechs p {
+	margin: 0;
+}
+
+.divSemTechs span {
+	font-weight: 700;
 }

@@ -1,0 +1,100 @@
+.techsList {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	width: 766px;
+	height: 72px;
+	gap: 16px;
+	margin: 12px;
+
+	border-radius: 8px;
+	background-color: #262626;
+}
+
+.techsList label {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1rem;
+	margin-left: 12px;
+
+	font-size: 1rem;
+	font-weight: 400;
+}
+
+.trashIcon {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 24px;
+	height: 24px;
+	margin-right: 8px;
+
+	border-radius: 4px;
+
+	background-color: inherit;
+	transition: none;
+}
+
+.trashIcon:hover {
+	border-color: #333333;
+	background-color: #333333;
+}
+
+.trashIcon img:hover {
+	/* fill: #e25858; */
+	fill: invert(44%) sepia(38%) saturate(1013%) hue-rotate(314deg)
+		brightness(97%) contrast(88%);
+}
+
+.techsList label p.completed {
+	text-decoration: line-through;
+	color: #808080;
+}
+
+/* estilizando o checkbox */
+
+.techsList label input.checkBox {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+
+	width: 24px;
+	height: 24px;
+
+	background-color: none;
+	border: 2px solid #4ea8de;
+	border-radius: 50%;
+	outline: none;
+	cursor: pointer;
+
+	transition: 200ms ease-in-out;
+}
+
+.techsList label input.checkBox:hover {
+	background-color: #4ea7de1e;
+}
+
+.techsList label input.checkBox:checked {
+	background-color: #5e60ce;
+	border: 2px solid #5e60ce;
+}
+
+.techsList label input.checkBox:checked:hover {
+	background-color: #8284fa;
+	border: 2px solid #8284fa;
+}
+
+.techsList label input.checkBox:checked::after {
+	content: "";
+	display: block;
+	width: 6px;
+	height: 10px;
+	border: 2px solid white;
+	border-width: 0 2px 2px 0;
+	transform: rotate(45deg);
+	margin: 2px 6px;
+}

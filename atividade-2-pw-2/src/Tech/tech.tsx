@@ -1,4 +1,5 @@
 import React from 'react';
+import "./tech.css"
 
 interface TechProps {
   tech: string;
@@ -9,12 +10,14 @@ interface TechProps {
 
 export function Tech({ tech, completed, onToggle, onRemove }: TechProps) {
   return (
-    <div>
+    <div className='techsList'>
       <label>
-        <input type="checkbox" checked={completed} onChange={onToggle} />
-        {tech}
+        <input className='checkBox' type="checkbox" checked={completed} onChange={onToggle} />
+        <p className={completed ? 'completed' : ''}>{tech}</p>
       </label>
-      <button onClick={onRemove}>Remover</button>
+      <button className='trashIcon' onClick={onRemove}>
+        <img src="/trash-icon.svg" alt="Ícone de Remoção" />
+      </button>
     </div>
   );
 }
